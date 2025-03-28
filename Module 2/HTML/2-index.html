@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Level II Demonstration</title>
+</head>
+<body>
+
+    <!-- Semantic structural tags -->
+    <header>
+        <h1>Welcome to Netcentric Computing</h1>
+        <nav>
+            <a href="#">Home</a> |
+            <a href="#Register">Register</a> |
+            <a href="javascript:alert('Dennis Vickers: vickersd@spu.edu');">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Article and Section -->
+        <article>
+            <h2>Course Overview</h2>
+            <p>This article gives an overview of our netcentric computing course.</p>
+        </article>
+
+        <section>
+            <h3>Topics Covered</h3>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>Client-Server Architecture</li>
+            </ul>
+        </section>
+
+        <!-- Aside for complementary content -->
+        <aside>
+            <h3>Related Resources</h3>
+            <p>Check out the W3C website for official HTML documentation.</p>
+        </aside>
+
+        <!-- Generic structural tags -->
+        <div>
+            <h3>Using Generic Tags</h3>
+            <p>This is a <span style="font-weight: bold;">simple span</span> inside a paragraph.</p>
+        </div>
+
+        <!-- Form Demonstration -->
+        <section id="Register">
+            <h2>Register for the Course</h2>
+            <form action="/submit" method="post" target="_blank">
+                <!-- Text Input -->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter username"><br><br>
+
+                <!-- Password Input -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password"><br><br>
+
+                <!-- Radio Buttons -->
+                <p>Select Role:</p>
+                <input type="radio" id="student" name="role" value="student" checked>
+                <label for="student">Student</label>
+                <input type="radio" id="instructor" name="role" value="instructor">
+                <label for="instructor">Instructor</label><br><br>
+
+                <!-- Checkboxes -->
+                <p>Select Modules:</p>
+                <input type="checkbox" id="mod1" name="modules" value="html">
+                <label for="mod1">HTML</label>
+                <input type="checkbox" id="mod2" name="modules" value="js">
+                <label for="mod2">JavaScript</label><br><br>
+
+                <!-- Dropdown -->
+                <label for="track">Select Track:</label>
+                <select id="track" name="track">
+                    <option value="frontend">Frontend</option>
+                    <option value="backend" selected>Backend</option>
+                    <option value="fullstack">Full Stack</option>
+                </select><br><br>
+
+                <!-- Textarea -->
+                <label for="comments">Additional Comments:</label><br>
+                <textarea id="comments" name="comments" rows="4" cols="40"></textarea><br><br>
+
+                <!-- Buttons -->
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Netcentric Computing | <a href="#">Privacy Policy</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+/* Box Sizing and Font */
+* {
+    box-sizing: border-box;
+    font-family: "Gill Sans", sans-serif;
+  }
+  
+  body {
+    font-size: 16px;
+    margin: 20px;
+    background-color: lightgray;
+  }
+  
+  /* Box Model: content, padding, border, margin */
+  .box {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid steelblue;
+    margin: 40px;
+    background-color: white;
+  }
+  
+  /* Different margin shorthand examples */
+  .box.one { margin: 20px; }
+  .box.two { margin: 10px 30px; }
+  .box.three { margin: 10px 20px 30px; }
+  .box.four { margin: 10px 15px 20px 25px; }
+  
+  /* Descendant combinator */
+  .box p {
+    color: #333;
+  }
+  
+  /* Child combinator */
+  .box > span {
+    display: block;
+    color: teal;
+    font-weight: bold;
+  }
+  
+  /* General sibling */
+  .note ~ p {
+    font-style: italic;
+    color: gray;
+  }
+  
+  /* Adjacent sibling */
+  h2 + p {
+    color: darkgreen;
+    font-weight: bold;
+  }
+  
+  /* Pseudo-class */
+  a:visited {
+    color: purple;
+  }
+  
+  a:hover {
+    color: orange;
+  }
+  
+  /* Pseudo-element */
+  p::first-line {
+    font-weight: bold;
+  }
+  
+  /* Font sizing examples */
+  .font-demo {
+    font-size: 1.2rem;
+  }
+  
+  .font-demo span {
+    font-size: 2em;
+  }
+  

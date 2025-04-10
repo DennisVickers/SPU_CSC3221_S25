@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Specificity Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>CSS Specificity Example</h1>
+
+  <p>This paragraph has no class or ID.</p>
+
+  <p class="important-text">This paragraph has a class.</p>
+
+  <p id="unique-text">This paragraph has an ID.</p>
+
+  <p class="important-text" id="unique-text-2">This paragraph has both class and ID.</p>
+
+  <p style="color: red;">This paragraph uses <strong>inline style</strong>.</p>
+
+  <p class="important-text" id="unique-important" style="color: red;">This paragraph has everything plus inline style.</p>
+
+  <p class="force-important">This one uses <code>!important</code> in the stylesheet.</p>
+</body>
+</html>

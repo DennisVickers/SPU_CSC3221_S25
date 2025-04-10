@@ -1,0 +1,61 @@
+/* Base Styles (Mobile First) */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: snow;
+    color: black;
+  }
+  
+  header, footer {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .content, .sidebar {
+    background-color: white;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    padding: 1rem;
+    border: 1px solid lightgray;
+  }
+  
+  /* Medium Screens (Tablets: ≥ 600px) */
+  @media (min-width: 600px) {
+    main {
+      flex-direction: row;
+    }
+  
+    .content {
+      flex-grow: 3;
+      margin-right: 1rem;
+    }
+  
+    .sidebar {
+      flex-grow: 1;
+    }
+  }
+  
+  /* Large Screens (Desktops: ≥ 900px) */
+  @media (min-width: 900px) {
+    body {
+      background-color: turquoise;
+    }
+  
+    header, footer {
+      font-size: 1.5rem;
+    }
+  
+    .content, .sidebar {
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+  }
+  

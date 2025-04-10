@@ -1,0 +1,30 @@
+/* Element selector - low specificity (0, 0, 0, 1) */
+p {
+    color: black;
+}
+  
+/* Class selector - medium specificity (0, 0, 1, 0) */
+.important-text {
+    color: blue;
+}
+  
+/* ID selector - higher specificity (0, 1, 0, 0) */
+#unique-text,
+#unique-text-2,
+#unique-important {
+    color: green;
+}
+  
+/* Class + ID - higher specificity (0, 1, 1, 0) */
+#unique-text-2.important-text {
+    color: purple;
+}
+  
+/* Inline style - highest specificity (1, 0, 0, 0) */
+/* Already handled inline in HTML: style="color: red;" */
+  
+/* !important overrides all specificity rules */
+.force-important {
+    color: orange !important;
+}
+  

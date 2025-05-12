@@ -3,6 +3,7 @@
 const syncBtn = document.querySelector("#sync");
 const callbackBtn = document.querySelector("#callbacks");
 const promiseBtn = document.querySelector("#promises");
+const asyncAwaitBtn = document.querySelector("#asyncAwait");
 const textArea = document.querySelector("#textOutput");
 const subHead = document.querySelector("#subHead")
 
@@ -55,6 +56,12 @@ function AddBookCallback(newBook, ShowBooks) {
 };
 
 // Add the book to the array and show it using callback
+/*******************
+ * A promises constructor is called an exector
+ * It receives two functions as parameters: resolveFunc and rejectFunc. 
+ * Any errors thrown in the executor will cause the promise to be 
+ * rejected, and the return value will be neglected.
+ */
 function AddBookPromise(newBook) {
    ResetBooks(books);
    const p = new Promise((resolve,reject) => {
@@ -70,6 +77,16 @@ function AddBookPromise(newBook) {
    });
 
    return p;
+};
+
+async function AddBookAsync(newBook) {
+   ResetBooks(books);
+   try {
+      await AddBookPromise(newBook);
+      ShowBooks();
+   } catch (err) {
+      console.log(err);
+   };
 };
 
 
@@ -94,4 +111,10 @@ promiseBtn.addEventListener("click", (e) => {
    AddBookPromise(newBook)
    .then(res => ShowBooks())
    .catch(err => console.log(err))
+});
+
+asyncAwaitBtn.addEventListener("click", (e) => {
+   e.preventDefault();
+   subHead.innerHTML = "Async/Await Demo";
+   AddBookAsync(newBook);
 });

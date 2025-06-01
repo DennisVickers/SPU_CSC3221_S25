@@ -1,10 +1,10 @@
 const express = require("express");
-const connectDB = require("./connect");
-
-const port = 8080;
-
-const appName = "Task Manager";
+const cors = require("cors");
 const app = express();
+
+const connectDB = require("./connect");  // Connect to remote DB
+
+app.use(cors());  // Allow all Cross Origin Reqests
 
 // Middleware
 app.use(express.json());
@@ -26,6 +26,8 @@ app.get("/tm/tasks", async (req,res)=>{
 });
 
 // Connect to the database and start the appl server
+const port = 8080;
+const appName = "Task Manager";
 (async function () {
 	try {
 		await connectDB();
